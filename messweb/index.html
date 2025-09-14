@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitly | Uncomplicate Your Move. Simplify Your Stay.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #F5F5DC; /* Beige */
+            font-family: 'Inter', sans-serif;
+            color: #1a1a1a;
+        }
+        .text-brown-custom {
+            color: #8B4513;
+        }
+        .bg-green-custom {
+            background-color: #367C37; /* Darker Green */
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header/Navigation (Simplified) -->
+    <nav class="p-4 flex items-center justify-between bg-green-custom text-white">
+        <div class="h-10">
+            <img src="habitly log.jpeg" alt="Habitly Logo" class="h-full">
+        </div>
+        <div class="md:hidden">
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <div id="desktop-menu" class="hidden md:flex space-x-6 text-lg">
+            <a href="#stay" class="hover:underline transition-colors">Stay Finder</a>
+            <a href="#meals" class="hover:underline transition-colors">Meal Service</a>
+            <a href="#" class="hover:underline transition-colors">Login</a>
+        </div>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white p-4 space-y-2">
+        <a href="#stay" class="block text-brown-custom text-lg">Stay Finder</a>
+        <a href="#meals" class="block text-brown-custom text-lg">Meal Service</a>
+        <a href="#" class="block text-brown-custom text-lg">Login</a>
+    </div>
+
+    <!-- Main Content Sections -->
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- Home Page Section - Focus on Accommodation -->
+        <section id="home" class="text-center py-16 md:py-24">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-brown-custom leading-tight">
+                Uncomplicate your move. Simplify your stay.
+            </h1>
+            <p class="mt-4 text-lg md:text-2xl text-brown-custom max-w-2xl mx-auto">
+                Find your perfect home with verified PGs, hostels, flats, and rooms.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#stay" class="bg-green-custom text-white px-8 py-4 rounded-full font-bold shadow-md hover:bg-opacity-80 transition-colors">Search for Stay</a>
+                <a href="#meals" class="bg-green-custom text-white px-8 py-4 rounded-full font-bold shadow-md hover:bg-opacity-80 transition-colors">Browse Meal Plans</a>
+            </div>
+        </section>
+
+        <!-- Feature Blocks -->
+        <section id="features" class="grid grid-cols-1 md:grid-cols-3 gap-8 py-16">
+            <div class="bg-white p-6 rounded-3xl shadow-lg border-2 border-green-custom">
+                <div class="flex items-center space-x-3 text-green-custom mb-3">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.023 12.023 0 002 12c0 3.071 1.071 5.86 2.768 8.016A11.955 11.955 0 0112 21.056c3.071 0 5.86-1.071 8.016-2.768A12.023 12.023 0 0022 12c0-3.071-1.071-5.86-2.768-8.016z"></path></svg>
+                    <h3 class="text-2xl font-semibold">Verified Stays</h3>
+                </div>
+                <p class="text-brown-custom mt-2">Find a place you can trust. Every listing is meticulously checked to ensure a safe and comfortable living experience.</p>
+            </div>
+            <div class="bg-white p-6 rounded-3xl shadow-lg border-2 border-green-custom">
+                <div class="flex items-center space-x-3 text-green-custom mb-3">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3 class="text-2xl font-semibold">Effortless Meals</h3>
+                </div>
+                <p class="text-brown-custom mt-2">Enjoy delicious, healthy, home-cooked meals without the hassle. Freshly prepared and delivered right to your door.</p>
+            </div>
+            <div class="bg-white p-6 rounded-3xl shadow-lg border-2 border-green-custom">
+                <div class="flex items-center space-x-3 text-green-custom mb-3">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <h3 class="text-2xl font-semibold">Local Community</h3>
+                </div>
+                <p class="text-brown-custom mt-2">Connect with local chefs and property owners. Support your community while finding the perfect place to live and eat.</p>
+            </div>
+        </section>
+
+        <!-- Stay Finder Section -->
+        <section id="stay" class="py-16">
+            <h2 class="text-4xl font-bold text-brown-custom text-center mb-10">Find Your Next Stay</h2>
+            <!-- Search Bar (Simplified) -->
+            <div class="flex flex-col md:flex-row items-center bg-white p-4 rounded-full shadow-lg mb-8 space-y-4 md:space-y-0 md:space-x-4">
+                <input type="text" placeholder="Location, City" class="flex-1 px-4 py-2 rounded-full outline-none focus:ring-2 focus:ring-green-custom">
+                <input type="text" placeholder="Rent Range" class="flex-1 px-4 py-2 rounded-full outline-none focus:ring-2 focus:ring-green-custom">
+                <select class="flex-1 px-4 py-2 rounded-full outline-none focus:ring-2 focus:ring-green-custom">
+                    <option>Type</option>
+                    <option>PG</option>
+                    <option>Flat</option>
+                    <option>Hostel</option>
+                </select>
+                <button class="bg-green-custom text-white px-6 py-2 rounded-full font-semibold hover:bg-opacity-80 transition-colors">Search</button>
+            </div>
+            
+            <!-- Hostels Section -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-brown-custom mb-6">Hostels</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Hostel Listing 1 -->
+                    <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-brown-custom hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <img src="Working Women Hostel Chennai.jpg" alt="Lively Hostel" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-2xl font-bold text-brown-custom">The Traveler Hostel</h4>
+                                <span class="bg-green-custom text-white text-xs font-semibold px-3 py-1 rounded-full">Habitly Verified</span>
+                            </div>
+                            <p class="text-lg text-gray-700 mt-2">Rs. 6,000 / month</p>
+                            <p class="text-sm mt-1 text-gray-500">Dormitory, Wi-Fi, Lounge Area</p>
+                            <a href="#" class="mt-4 inline-block text-green-custom font-semibold hover:underline">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Hostel Listing 2 -->
+                    <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-brown-custom hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <img src="bunk beds.jpg" alt="Cozy Hostel" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-2xl font-bold text-brown-custom">The Backpackers' Inn</h4>
+                                <span class="bg-green-custom text-white text-xs font-semibold px-3 py-1 rounded-full">Habitly Verified</span>
+                            </div>
+                            <p class="text-lg text-gray-700 mt-2">Rs. 7,200 / month</p>
+                            <p class="text-sm mt-1 text-gray-500">Private & Dorm Beds, Shared Kitchen</p>
+                            <a href="#" class="mt-4 inline-block text-green-custom font-semibold hover:underline">View Details</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-brown-custom hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <img src="Bunk Room Ideas That Your Family Will Love!.jpg" alt="Lively Hostel" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-2xl font-bold text-brown-custom">The grinders Hostel</h4>
+                                <span class="bg-green-custom text-white text-xs font-semibold px-3 py-1 rounded-full">Habitly Verified</span>
+                            </div>
+                            <p class="text-lg text-gray-700 mt-2">Rs. 6,000 / month</p>
+                            <p class="text-sm mt-1 text-gray-500">Dormitory, Wi-Fi, Lounge Area</p>
+                            <a href="#" class="mt-4 inline-block text-green-custom font-semibold hover:underline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PGs Section -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-brown-custom mb-6">PGs (Paying Guests)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- PG Listing 1 -->
+                    <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-brown-custom hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <img src="Coliving in Hyderabad_ Settl_ has you covered….jpg" alt="Modern PG" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-2xl font-bold text-brown-custom">The Student PG</h4>
+                                <span class="bg-green-custom text-white text-xs font-semibold px-3 py-1 rounded-full">Habitly Verified</span>
+                            </div>
+                            <p class="text-lg text-gray-700 mt-2">Rs. 8,500 / month</p>
+                            <p class="text-sm mt-1 text-gray-500">Shared Room, All-Inclusive Bills, Meals</p>
+                            <a href="#" class="mt-4 inline-block text-green-custom font-semibold hover:underline">View Details</a>
+                        </div>
+                    </div>
+                    <!-- PG Listing 2 -->
+                    <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-brown-custom hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <img src="xiaohongshu 🀄️.jpg" alt="Deluxe PG" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-2xl font-bold text-brown-custom">Harmony House PG</h4>
+                                <span class="bg-green-custom text-white text-xs font-semibold px-3 py-1 rounded-full">Habitly Verified</span>
+                            </div>
+                            <p class="text-lg text-gray-700 mt-2">Rs. 11,000 / month</p>
+                            <p class="text-sm mt-1 text-gray-500">Private Rooms, Laundry Service, Gym</p>
+                            <a href="#" class="mt-4 inline-block text-green-custom font-semibold hover:underline">View Details</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-brown-custom hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <img src="notts dorm.jpg" alt="Deluxe PG" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-2xl font-bold text-brown-custom">Bird Nest PG</h4>
+                                <span class="bg-green-custom text-white text-xs font-semibold px-3 py-1 rounded-full">Habitly Verified</span>
+                            </div>
+                            <p class="text-lg text-gray-700 mt-2">Rs. 11,000 / month</p>
+                            <p class="text-sm mt-1 text-gray-500">Private Rooms, Laundry Service, Gym</p>
+                            <a href="#" class="mt-4 inline-block text-green-custom font-semibold hover:underline">View Details</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Rooms/Flats Section -->
+            <div>
+                <h3 class="text-3xl font-bold text-brown-custom mb-6">Rooms & Flats</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Rooms/Flats Listing 1 -->
+                    <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-brown-custom hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <img src="download (1).jpg" alt="Modern Flat" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-2xl font-bold text-brown-custom">Modern City Flat</h4>
+                                <span class="bg-green-custom text-white text-xs font-semibold px-3 py-1 rounded-full">Habitly Verified</span>
+                            </div>
+                            <p class="text-lg text-gray-700 mt-2">Rs. 15,000 / month</p>
+                            <p class="text-sm mt-1 text-gray-500">2BHK, Fully Furnished, Central Location</p>
+                            <a href="#" class="mt-4 inline-block text-green-custom font-semibold hover:underline">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Rooms/Flats Listing 2 -->
+                    <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-brown-custom hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <img src="download (2).jpg" alt="Cozy Room" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-2xl font-bold text-brown-custom">Spacious Private Room</h4>
+                                <span class="bg-green-custom text-white text-xs font-semibold px-3 py-1 rounded-full">Habitly Verified</span>
+                            </div>
+                            <p class="text-lg text-gray-700 mt-2">Rs. 9,500 / month</p>
+                            <p class="text-sm mt-1 text-gray-500">Private Bath, Shared Kitchen, Balcony</p>
+                            <a href="#" class="mt-4 inline-block text-green-custom font-semibold hover:underline">View Details</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-brown-custom hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <img src="download (3).jpg" alt="Cozy Room" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-2xl font-bold text-brown-custom">mayfair heights</h4>
+                                <span class="bg-green-custom text-white text-xs font-semibold px-3 py-1 rounded-full">Habitly Verified</span>
+                            </div>
+                            <p class="text-lg text-gray-700 mt-2">Rs. 9,500 / month</p>
+                            <p class="text-sm mt-1 text-gray-500">Private Bath, Shared Kitchen, Balcony</p>
+                            <a href="#" class="mt-4 inline-block text-green-custom font-semibold hover:underline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI Property Description Generator -->
+            <div class="mt-16 bg-white p-8 rounded-3xl shadow-lg border-2 border-green-custom">
+                <h3 class="text-3xl font-bold text-brown-custom mb-6">For Providers: Generate a Description ✨</h3>
+                <p class="text-gray-700 mb-4">Enter a few details and let our AI create a professional description for your listing!</p>
+                <div class="space-y-4">
+                    <input type="text" id="propertyType" placeholder="e.g., PG, Flat, Hostel" class="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-green-custom">
+                    <input type="text" id="amenities" placeholder="e.g., Wi-Fi, AC, Laundry" class="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-green-custom">
+                    <input type="text" id="location" placeholder="e.g., Central Park, New Delhi" class="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-green-custom">
+                    <button id="generateDescriptionBtn" class="w-full bg-green-custom text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-80 transition-colors">✨ Generate Description</button>
+                    <div id="descriptionLoader" class="hidden text-center text-brown-custom mt-4">Generating...</div>
+                    <textarea id="generatedDescription" class="w-full h-32 p-4 rounded-lg border mt-4 text-gray-800" placeholder="Your generated description will appear here..." readonly></textarea>
+                </div>
+            </div>
+
+            <!-- AI Neighborhood Vibe Generator -->
+            <div class="mt-16 bg-white p-8 rounded-3xl shadow-lg border-2 border-green-custom">
+                <h3 class="text-3xl font-bold text-brown-custom mb-6">For Users: Get the Neighborhood Vibe ✨</h3>
+                <p class="text-gray-700 mb-4">Enter a location to get a summary of its atmosphere, social scene, and student life.</p>
+                <div class="space-y-4">
+                    <input type="text" id="vibeLocation" placeholder="e.g., Koramangala, Bangalore" class="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-green-custom">
+                    <button id="generateVibeBtn" class="w-full bg-green-custom text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-80 transition-colors">✨ Get Neighborhood Vibe</button>
+                    <div id="vibeLoader" class="hidden text-center text-brown-custom mt-4">Generating...</div>
+                    <p id="generatedVibe" class="p-4 rounded-lg border mt-4 text-gray-800 hidden"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Home-Cooked Meal Section -->
+        <section id="meals" class="py-16">
+            <h2 class="text-4xl font-bold text-brown-custom text-center mb-10">Fresh Home-Cooked Meals</h2>
+            <!-- Meal Search Bar (Simplified) -->
+            <div class="flex flex-col md:flex-row items-center bg-white p-4 rounded-full shadow-lg mb-8 space-y-4 md:space-y-0 md:space-x-4">
+                <input type="text" placeholder="Cuisine, Location" class="flex-1 px-4 py-2 rounded-full outline-none focus:ring-2 focus:ring-green-custom">
+                <select class="flex-1 px-4 py-2 rounded-full outline-none focus:ring-2 focus:ring-green-custom">
+                    <option>Subscription</option>
+                    <option>Weekly</option>
+                    <option>Monthly</option>
+                    <option>Daily</option>
+                </select>
+                <button class="bg-green-custom text-white px-6 py-2 rounded-full font-semibold hover:bg-opacity-80 transition-colors">Browse</button>
+            </div>
+
+            <!-- Chef/Meal Listings Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Meal Card 1 -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-brown-custom hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <img src="North Indian Meal Prep Ideas.jpg" alt="North Indian Thali" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-2xl font-bold text-brown-custom">Chef Meena's Kitchen</h3>
+                            <span class="bg-green-custom text-white text-xs font-semibold px-3 py-1 rounded-full">Hygiene Certified</span>
+                        </div>
+                        <p class="text-lg text-gray-700 mt-2">Authentic North Indian Meals</p>
+                        <p class="text-sm mt-1 text-gray-500">Weekly subscription from Rs. 2,500</p>
+                        <a href="#" class="mt-4 inline-block text-green-custom font-semibold hover:underline">View Menu</a>
+                    </div>
+                </div>
+                <!-- Meal Card 2 -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-brown-custom hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <img src="Yummy 😋😋.jpg" alt="Daily Specials" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-2xl font-bold text-brown-custom">Aunty Shanti's Meals</h3>
+                            <span class="bg-green-custom text-white text-xs font-semibold px-3 py-1 rounded-full">Hygiene Certified</span>
+                        </div>
+                        <p class="text-lg text-gray-700 mt-2">Daily Tiffins & On-Demand Specials</p>
+                        <p class="text-sm mt-1 text-gray-500">Daily plan from Rs. 150</p>
+                        <a href="#" class="mt-4 inline-block text-green-custom font-semibold hover:underline">View Menu</a>
+                    </div>
+                </div>
+                <!-- Meal Card 3 -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-brown-custom hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <img src="Indian vegetarian lunch box or tiffin made up of stainless steel for office or workplace, includes dal fry, gobi masala, rice with chapati and salad _ Premium Photo.jpg" alt="The Tiffin Box" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-2xl font-bold text-brown-custom">The Tiffin Box</h3>
+                            <span class="bg-green-custom text-white text-xs font-semibold px-3 py-1 rounded-full">Hygiene Certified</span>
+                        </div>
+                        <p class="text-lg text-gray-700 mt-2">South Indian & Continental Cuisine</p>
+                        <p class="text-sm mt-1 text-gray-500">Monthly plan from Rs. 4,800</p>
+                        <a href="#" class="mt-4 inline-block text-green-custom font-semibold hover:underline">View Menu</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Meal Plan Generator -->
+            <div class="mt-16 bg-white p-8 rounded-3xl shadow-lg border-2 border-green-custom">
+                <h3 class="text-3xl font-bold text-brown-custom mb-6">For Chefs: Generate a Weekly Meal Plan ✨</h3>
+                <p class="text-gray-700 mb-4">Click below to generate a new, delicious weekly menu for your home-cooked meals!</p>
+                <button id="generateMenuBtn" class="w-full bg-green-custom text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-80 transition-colors">✨ Generate a Weekly Menu</button>
+                <div id="menuLoader" class="hidden text-center text-brown-custom mt-4">Generating...</div>
+                <div id="generatedMenu" class="mt-6 p-4 rounded-lg bg-beige-light border border-dashed border-brown-custom text-gray-800 hidden">
+                    <h4 class="text-xl font-bold text-brown-custom mb-2">Weekly Meal Plan:</h4>
+                    <pre id="menuContent" class="whitespace-pre-wrap font-sans text-sm"></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brown-custom py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col md:flex-row justify-center md:space-x-8 space-y-4 md:space-y-0 text-sm text-[#367C37]">
+                <a href="#" class="hover:underline hover:text-green-300 transition-colors">About Us</a>
+                <a href="#" class="hover:underline hover:text-green-300 transition-colors">Contact Us</a>
+                <a href="#" class="hover:underline hover:text-green-300 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:underline hover:text-green-300 transition-colors">Terms of Service</a>
+            </div>
+            <p class="mt-8 text-sm opacity-75 text-[#367C37]">© 2024 Habitly. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to toggle the mobile menu
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Gemini API integration for generating content
+
+        const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=';
+        const apiKey = "";
+
+        // Function for Property Description Generation
+        document.getElementById('generateDescriptionBtn').addEventListener('click', async () => {
+            const propertyType = document.getElementById('propertyType').value;
+            const amenities = document.getElementById('amenities').value;
+            const location = document.getElementById('location').value;
+            const descriptionBox = document.getElementById('generatedDescription');
+            const loader = document.getElementById('descriptionLoader');
+            const generateBtn = document.getElementById('generateDescriptionBtn');
+
+            if (!propertyType || !amenities || !location) {
+                descriptionBox.value = "Please fill in all fields to generate a description.";
+                return;
+            }
+            
+            generateBtn.disabled = true;
+            generateBtn.textContent = 'Generating...';
+            loader.classList.remove('hidden');
+            descriptionBox.value = '';
+
+            const prompt = `Write a compelling and professional property description for a ${propertyType} located in ${location}. Highlight the following amenities: ${amenities}. Make it sound attractive to potential tenants. Do not include price information. The tone should be formal and inviting.`;
+            
+            try {
+                const response = await fetch(API_URL + apiKey, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: prompt }] }]
+                    })
+                });
+
+                const result = await response.json();
+                const text = result?.candidates?.[0]?.content?.parts?.[0]?.text || 'Error: Could not generate description.';
+                descriptionBox.value = text;
+            } catch (error) {
+                console.error('Error:', error);
+                descriptionBox.value = 'An error occurred. Please try again.';
+            } finally {
+                generateBtn.disabled = false;
+                generateBtn.textContent = '✨ Generate Description';
+                loader.classList.add('hidden');
+            }
+        });
+
+        // Function for Neighborhood Vibe Generation
+        document.getElementById('generateVibeBtn').addEventListener('click', async () => {
+            const vibeLocation = document.getElementById('vibeLocation').value;
+            const vibeText = document.getElementById('generatedVibe');
+            const loader = document.getElementById('vibeLoader');
+            const generateBtn = document.getElementById('generateVibeBtn');
+
+            if (!vibeLocation) {
+                vibeText.textContent = "Please enter a location to get the vibe.";
+                vibeText.classList.remove('hidden');
+                return;
+            }
+            
+            generateBtn.disabled = true;
+            generateBtn.textContent = 'Generating...';
+            loader.classList.remove('hidden');
+            vibeText.textContent = '';
+            vibeText.classList.add('hidden');
+
+            const prompt = `Describe the general atmosphere, key social spots, and student life in the neighborhood of ${vibeLocation}. The response should be a concise paragraph and sound inviting to a potential new resident.`;
+
+            try {
+                const response = await fetch(API_URL + apiKey, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: prompt }] }],
+                        tools: [{ "google_search": {} }],
+                    })
+                });
+
+                const result = await response.json();
+                const text = result?.candidates?.[0]?.content?.parts?.[0]?.text || 'Error: Could not generate vibe.';
+                vibeText.textContent = text;
+            } catch (error) {
+                console.error('Error:', error);
+                vibeText.textContent = 'An error occurred. Please try again.';
+            } finally {
+                generateBtn.disabled = false;
+                generateBtn.textContent = '✨ Get Neighborhood Vibe';
+                loader.classList.add('hidden');
+                vibeText.classList.remove('hidden');
+            }
+        });
+
+        // Function for Weekly Meal Plan Generation
+        document.getElementById('generateMenuBtn').addEventListener('click', async () => {
+            const menuBox = document.getElementById('generatedMenu');
+            const menuContent = document.getElementById('menuContent');
+            const loader = document.getElementById('menuLoader');
+            const generateBtn = document.getElementById('generateMenuBtn');
+
+            generateBtn.disabled = true;
+            generateBtn.textContent = 'Generating...';
+            loader.classList.remove('hidden');
+            menuBox.classList.add('hidden');
+            menuContent.textContent = '';
+
+            const prompt = 'Create a detailed and appealing weekly meal plan (7 days) for a home-cooked meal service. The cuisine should be a mix of popular Indian and Continental dishes. Provide a breakfast, lunch, and dinner option for each day. Format the output clearly with day names as headings.';
+
+            try {
+                const response = await fetch(API_URL + apiKey, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: prompt }] }]
+                    })
+                });
+
+                const result = await response.json();
+                const text = result?.candidates?.[0]?.content?.parts?.[0]?.text || 'Error: Could not generate menu.';
+                menuContent.textContent = text;
+            } catch (error) {
+                console.error('Error:', error);
+                menuContent.textContent = 'An error occurred. Please try again.';
+            } finally {
+                generateBtn.disabled = false;
+                generateBtn.textContent = '✨ Generate a Weekly Menu';
+                loader.classList.add('hidden');
+                menuBox.classList.remove('hidden');
+            }
+        });
+
+    </script>
+</body>
+</html>
